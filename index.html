@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BHUMIPUTRA 🌾 भूमिपुत्र</title>
+<link href="https://fonts.googleapis.com/css2?family=Yatra+One&family=Mukta:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--g:#2D5A27;--a:#D9822B;--p:#FBF9F3;--ink:#1F2A1C;--s:#E9EFE2;--m:#5B6657}
+*{box-sizing:border-box}
+body{margin:0;background:#fff;color:var(--ink);font:18px/1.6 'Mukta','Noto Sans Devanagari',system-ui,sans-serif}
+h1,h2,h3{font-family:'Yatra One','Noto Serif Devanagari',Georgia,serif;font-weight:400;line-height:1.2;margin:0}
+.w{max-width:760px;margin:0 auto;padding:0 18px}
+section{padding:36px 0}
+h2{font-size:1.6rem;color:var(--g)}h2 small{display:block;font:1rem 'Mukta',sans-serif;color:var(--m)}
+h3{font-size:1.15rem;color:var(--g);margin:22px 0 4px}
+small{color:var(--m);font-size:.85em}
+.hero{background:var(--g);color:#fff;padding:46px 0 34px}
+.hero h1{font-size:clamp(2rem,9.5vw,3.6rem)}
+.pg{max-width:820px;margin:0 auto;border-radius:18px;overflow:hidden;box-shadow:0 2px 18px rgba(45,90,39,.2)}
+.tag{font:1.3rem 'Yatra One',serif;color:#F6C98B;margin:8px 0 12px}
+.hero p{margin:0 0 20px;color:#E7EFE3;max-width:34em}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn,button{font:700 1rem 'Mukta',sans-serif;cursor:pointer}
+.btn{display:inline-block;padding:12px 20px;border-radius:999px;text-decoration:none;border:0}
+.amber{background:var(--a);color:#1F1305}.line{border:2px solid #fff;color:#fff}.dark{background:var(--g);color:#fff}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--a);outline-offset:2px}
+.today{background:var(--a);color:#1F1305;padding:26px 0}
+.place{font:clamp(1.8rem,8vw,2.8rem)/1.15 'Yatra One',serif;margin:2px 0 6px}
+.today p{margin:0 0 14px}
+.sched{list-style:none;margin:16px 0 0;padding:0;border-top:2px solid var(--g)}
+.sched li{display:grid;grid-template-columns:6.5em 1fr;gap:10px;padding:10px 8px;border-bottom:1px solid #D5DCCB}
+.sched b{color:var(--g)}.sched .on{background:var(--s);border-left:6px solid var(--a);padding-left:4px}
+#q,#eq{width:100%;padding:13px 16px;font:1rem 'Mukta',sans-serif;border:2px solid var(--g);border-radius:10px;background:#fff;margin-top:14px}
+.row{display:flex;justify-content:space-between;gap:12px;padding:11px 4px;border-bottom:1px solid #E3E8DA}
+.row b{color:var(--g);white-space:nowrap}.row.na b{color:#9A4B2B;font-weight:600;white-space:normal;text-align:right;font-size:.9rem}
+.row.na span{color:var(--m)}
+.note{margin-top:14px;color:var(--m);font-size:.95rem}
+.contact dt{font-weight:700;color:var(--g);margin-top:12px}.contact dd{margin:0}
+footer{background:var(--g);color:#D7E3D2;padding:18px 0;font-size:.9rem}
+footer .w{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.lk{background:none;border:0;color:#BFD2BA;text-decoration:underline;padding:6px}
+#panel{position:fixed;inset:0;background:var(--p);overflow:auto;z-index:9;padding:16px 0 60px}
+#panel[hidden],[hidden]{display:none!important}
+.bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.tabs{display:flex;gap:8px;margin:10px 0}
+.tabs button{flex:1;padding:11px;border:2px solid var(--g);background:#fff;border-radius:10px;color:var(--g)}
+.tabs button.on{background:var(--g);color:#fff}
+.fld{display:block;margin:10px 0 0;font-weight:600}
+.fld input,.fld select,.erow input,.erow select{width:100%;padding:11px;font:1rem 'Mukta',sans-serif;border:2px solid #B9C4AF;border-radius:8px;background:#fff}
+.erow{display:flex;gap:8px;align-items:center;padding:7px 0;border-bottom:1px solid #E3E8DA}
+.erow>span{flex:1;min-width:0}.erow input[type=number]{width:6.5em}
+.erow input:not([type=number]){flex:1}.erow select{width:7.5em}
+.tg{padding:9px 10px;border-radius:8px;border:2px solid #B9C4AF;background:#fff;color:#9A4B2B;min-width:8.6em}
+.tg.on{background:var(--g);border-color:var(--g);color:#fff}
+.x{padding:8px 12px;border:2px solid #B9C4AF;background:#fff;border-radius:8px}
+.msg{font-weight:600;margin-left:10px}
+.sec{background:var(--s);padding:14px;border-radius:10px;margin-top:16px}
+.pres label{display:inline-block;margin:6px 14px 0 0}
+.tw{overflow-x:auto;margin-top:10px}table{border-collapse:collapse;width:100%;font-size:.95rem}
+th,td{padding:8px;border-bottom:1px solid #D5DCCB;text-align:right;white-space:nowrap}th:first-child,td:first-child{text-align:left}
+.pos{color:var(--g);font-weight:700}.neg{color:#B0361F;font-weight:700}
+.tot{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.tot div{flex:1;min-width:8em;background:#fff;padding:10px;border-radius:8px}
+.tot b{display:block;font-size:1.2rem}
+em{font-style:normal;font-weight:700}
+.pg{display:flex;flex-direction:column;min-height:calc(100vh - 20px)}
+footer{margin-top:auto}
+.erow .ck{flex:none;display:flex}.erow .ck input{width:28px;height:28px;flex:none;padding:0;accent-color:var(--g)}
+.nt{background:#B0361F;color:#fff;padding:14px 0;font-weight:700}.nt small{display:block;color:#FFE3D8;font-weight:400;margin-top:2px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.chip{padding:9px 14px;border:2px solid var(--g);border-radius:999px;background:#fff;color:var(--g);font:600 .95rem 'Mukta',sans-serif;text-align:left}
+#nm{width:100%;min-height:110px;padding:12px;font:1rem 'Mukta',sans-serif;border:2px solid var(--g);border-radius:10px;margin-top:12px;background:#fff}
+.tabs{flex-wrap:wrap}.tabs button{flex:1 1 40%}
+.erow.att{flex-wrap:wrap}.seg{display:flex;gap:6px;flex-wrap:wrap}
+.seg button{padding:8px 10px;border:2px solid #B9C4AF;background:#fff;border-radius:8px;color:var(--m)}
+.seg button.on[data-s=present]{background:var(--g);border-color:var(--g);color:#fff}
+.seg button.on[data-s=half]{background:#D9822B;border-color:#D9822B;color:#1F1305}
+.seg button.on[data-s=absent]{background:#B0361F;border-color:#B0361F;color:#fff}
+.pie{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:10px}
+.lg{list-style:none;margin:0;padding:0}.lg li{margin:4px 0}
+.lg i{display:inline-block;width:14px;height:14px;border-radius:3px;margin-right:8px;vertical-align:-2px}
+.tabs{flex-wrap:wrap}.tabs button{min-width:5.5em}
+.gt{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;border-radius:12px;margin-top:14px}.gt::-webkit-scrollbar{display:none}
+.gs{flex:0 0 100%;scroll-snap-align:center;position:relative;aspect-ratio:16/10;background:#000}.gs img{width:100%;height:100%;object-fit:cover;display:block}
+.gs .cp{position:absolute;left:0;right:0;bottom:0;padding:26px 14px 10px;background:linear-gradient(transparent,rgba(0,0,0,.7));color:#fff;font-weight:600}
+.gs .pl{position:absolute;inset:0;margin:auto;width:64px;height:64px;border-radius:50%;background:rgba(0,0,0,.6);color:#fff;font-size:1.8rem;display:flex;align-items:center;justify-content:center;text-decoration:none}
+.dots{display:flex;justify-content:center;gap:7px;margin-top:10px}.dots i{width:9px;height:9px;border-radius:50%;background:#C5CEBB}.dots i.on{background:var(--g)}
+
+/* ---- standalone page + 3D scroll layer ---- */
+body{background:var(--p)}
+.pg{max-width:none;border-radius:0;box-shadow:none;min-height:0}
+#sp{position:fixed;top:0;left:0;height:4px;width:0;background:var(--a);z-index:30}
+.hero{position:relative;overflow:hidden;perspective:900px}
+.hero .w{position:relative;z-index:1;transform-origin:50% 100%;transform:translate3d(0,calc(var(--hp,0)*70px),0) rotateX(calc(var(--hp,0)*-14deg));opacity:calc(1 - var(--hp,0)*.55);will-change:transform}
+.orb{position:absolute;border-radius:50%;pointer-events:none;animation:fl 6s ease-in-out infinite}
+.o1{width:260px;height:260px;right:-70px;top:-60px;background:radial-gradient(circle at 30% 30%,rgba(246,201,139,.55),rgba(217,130,43,.12) 70%);transform:translate3d(calc(var(--mx,0)*-30px),calc(var(--hp,0)*-120px),0)}
+.o2{width:180px;height:180px;left:-60px;bottom:-40px;background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.18),rgba(255,255,255,0) 70%);transform:translate3d(calc(var(--mx,0)*40px),calc(var(--hp,0)*-60px),0);animation-delay:-2s}
+.o3{width:70px;height:70px;right:22%;bottom:14%;background:radial-gradient(circle at 30% 30%,rgba(246,201,139,.6),rgba(246,201,139,0) 70%);transform:translate3d(calc(var(--mx,0)*60px),calc(var(--hp,0)*-200px),0);animation-delay:-4s}
+@keyframes fl{0%,100%{translate:0 0}50%{translate:0 -16px}}
+.rv{opacity:0;transform:perspective(900px) translate3d(0,46px,-60px) rotateX(14deg);transform-origin:50% 100%;transition:opacity .8s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+.sched li{opacity:0;transform:translateX(-26px) rotateY(-14deg);transition:opacity .6s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.rv.in .sched li,.sched li:only-child{opacity:1;transform:none}
+.sched li:nth-child(2){transition-delay:.06s}.sched li:nth-child(3){transition-delay:.12s}.sched li:nth-child(4){transition-delay:.18s}.sched li:nth-child(5){transition-delay:.24s}.sched li:nth-child(6){transition-delay:.3s}.sched li:nth-child(7){transition-delay:.36s}
+.gt{perspective:900px}.gs{transition:opacity .2s}
+@media (prefers-reduced-motion:reduce){.rv,.sched li{opacity:1!important;transform:none!important;transition:none!important}.orb{animation:none}.hero .w{transform:none;opacity:1}}
+</style>
+</head>
+<body>
+<div id="sp"></div>
+<div class="pg">
+<div class="nt" id="nt" hidden><div class="w">📢 <span id="ntx"></span><small id="nta"></small></div></div>
+
+<header class="hero"><i class="orb o1"></i><i class="orb o2"></i><i class="orb o3"></i><div class="w">
+<h1>BHUMIPUTRA 🌾</h1>
+<div class="tag">शेतातून थेट आपल्या घरापर्यंत</div>
+<p>Fresh vegetables and fruits every day, plus our own Bhumiputra masalas, flours, grains and pulses. Brought to your neighbourhood in Nagpur.</p>
+<div class="btns"><a class="btn amber" href="#rates">🥬 आजचे दर · Today’s rates</a><a class="btn line" href="https://wa.me/919322914694" target="_blank" rel="noopener">💬 WhatsApp</a></div>
+</div></header>
+
+<div class="today"><div class="w">
+<b>आजचा बाजार · Today’s market (<span id="dn"></span>)</b>
+<div class="place" id="pl"></div>
+<p id="hr">Market hours: 7:30 AM – 11:00 AM. Message us for today’s exact stall spot.</p>
+<a class="btn dark" href="https://wa.me/919322914694?text=%E0%A4%86%E0%A4%9C%E0%A4%9A%E0%A5%87%20%E0%A4%A0%E0%A4%BF%E0%A4%95%E0%A4%BE%E0%A4%A3%20%E0%A4%B8%E0%A4%BE%E0%A4%82%E0%A4%97%E0%A4%BE" target="_blank" rel="noopener">💬 Ask for stall location</a>
+</div></div>
+
+<section id="rates"><div class="w">
+<h2>आजचे दर<small>Today’s rates. Type to search any vegetable or fruit.</small></h2>
+<input id="q" type="search" placeholder="Search · भाजी किंवा फळ शोधा" aria-label="Search vegetable or fruit">
+<div id="list"></div>
+<p class="note" id="upd"></p>
+<p class="note">Rates can change during the day. Message us on WhatsApp to order.</p>
+</div></section>
+
+<section id="gallery" hidden><div class="w">
+<h2>गॅलरी<small>Gallery</small></h2>
+<div class="gt" id="gt"></div><div class="dots" id="gd"></div>
+</div></section>
+
+<section style="background:var(--s)"><div class="w">
+<h2>साप्ताहिक बाजार<small>Weekly market schedule, 7:30 AM to 11:00 AM</small></h2>
+<ul class="sched" id="sc">
+<li data-d="1"><b>सोमवार</b><span>Corporation Colony</span></li>
+<li data-d="2"><b>मंगळवार</b><span>Giripeth / Gorepeth</span></li>
+<li data-d="3"><b>बुधवार</b><span>Swavalambi Nagar / Pratap Nagar / Atrey Layout</span></li>
+<li data-d="4"><b>गुरुवार</b><span>Shivaji Nagar</span></li>
+<li data-d="5"><b>शुक्रवार</b><span>अवकाश · No market. Collection and packing day</span></li>
+<li data-d="6"><b>शनिवार</b><span>Shankar Nagar</span></li>
+<li data-d="0"><b>रविवार</b><span>Deendayal Nagar</span></li>
+</ul></div></section>
+
+<section class="contact"><div class="w">
+<h2>संपर्क<small>Contact and location</small></h2>
+<dl>
+<dt>WhatsApp (orders and daily rates)</dt><dd><a href="https://wa.me/919322914694" target="_blank" rel="noopener">+91 93229 14694</a></dd>
+<dt>Phone</dt><dd><a href="tel:+919834881023">+91 98348 81023</a></dd>
+<dt>Email</dt><dd><a href="mailto:bhumiputrashetkarinagpur@gmail.com">bhumiputrashetkarinagpur@gmail.com</a></dd>
+<dt>Address</dt><dd>Sahara Shetkari Samuh, Mathurkar Groups of Company, Old Bagadganj, Dadaji Dhuniwale Chowk, Nagpur, Maharashtra 440008</dd>
+</dl>
+<h3>फॉलो करा · Follow us</h3>
+<div class="btns" style="margin-top:10px"><a class="btn dark" href="https://www.instagram.com/bhumiputrashetkarinagpur" target="_blank" rel="noopener">📸 Instagram</a><a class="btn dark" href="https://youtube.com/@bhumiputrashetkarinagpur1478" target="_blank" rel="noopener">▶️ YouTube</a></div>
+</div></section>
+
+<footer><div class="w"><span>© BHUMIPUTRA · Sahara Shetkari Samuh, Nagpur</span><button class="lk" id="lg">Staff login</button></div></footer>
+
+</div>
+
+<div id="panel" hidden><div class="w">
+<div class="bar"><h2>Staff area</h2><button class="x" id="cl">Close ✕</button></div>
+<div id="lb">
+<label class="fld">Password<input id="pw" type="password" autocomplete="current-password"></label>
+<p><button class="btn dark" id="go">Login</button><span class="msg" id="lm"></span></p>
+</div>
+<div id="wk" hidden>
+<div class="tabs" id="tb"><button class="on" id="tR">Rates</button><button id="tB">Bill</button><button id="tA">Analytics</button><button id="tM">Message</button><button id="tT">Attendance</button><button id="tG">Gallery</button></div>
+
+<div id="vR">
+<input id="eq" type="search" placeholder="Search item to change its rate" aria-label="Search item">
+<div class="btns" style="margin-top:10px"><button class="x" id="so">↑ Ticked to top</button><button class="x" id="rs">↺ Reset: untick all</button></div>
+<p class="note"><b class="msg" id="sm" style="margin-left:0">Changes save automatically.</b><br>Tick the box for items available today and type the price.</p>
+<div id="ed"></div>
+
+</div>
+
+<div id="vA" hidden>
+<div class="sec"><h3 style="margin-top:0">Employees</h3>
+<p class="note" style="margin:4px 0">Monthly = salary per month (counted as 1/30 per day). Daily = wage for each day present.</p>
+<div id="em"></div>
+<p><button class="x" id="ae">+ Add employee</button> <button class="btn dark" id="se">Save employees</button><span class="msg" id="em2"></span></p></div>
+
+<div class="sec"><h3 style="margin-top:0">Daily entry</h3>
+<label class="fld">Date<input id="dt" type="date"></label>
+<label class="fld">Total sales (₹)<input id="sa" type="number" inputmode="decimal"></label>
+<label class="fld">Purchase cost (₹)<input id="pu" type="number" inputmode="decimal"></label>
+<label class="fld">Other expenses (₹)<input id="ex" type="number" inputmode="decimal"></label>
+<p><button class="btn dark" id="sd">Save day</button><span class="msg" id="dm"></span></p>
+<small>Profit = sales − purchase − expenses − salary. Salary follows the Attendance tab (staff you did not mark count as present). Saving the same date again replaces it.</small></div>
+
+<div id="an"></div>
+</div>
+
+<div id="vT" hidden>
+<div class="sec"><h3 style="margin-top:0">Mark attendance</h3>
+<label class="fld">Date<input id="ad" type="date"></label>
+<div id="at"></div>
+<p><button class="btn dark" id="asv">Save attendance</button><b class="msg" id="ast"></b></p>
+<small>Half day counts as half a day’s pay. Staff you do not mark count as present.</small></div>
+<div class="sec"><h3 style="margin-top:0">Attendance report</h3>
+<label class="fld">Month<input id="am" type="month"></label>
+<label class="fld">Staff<select id="asel"><option value="">All staff</option></select></label>
+<div id="rp"></div></div>
+</div>
+
+<div id="vB" hidden>
+<h3 style="margin-top:0">Bill</h3>
+<label class="fld">Customer name (optional)<input id="bn" autocomplete="off"></label>
+<label class="fld">Customer mobile number<input id="bp" type="tel" inputmode="numeric" placeholder="10-digit number"></label>
+<div class="sec">
+<label class="fld" style="margin-top:0">Item<select id="bi"></select></label>
+<div class="erow" style="border:0"><input id="bq" type="number" inputmode="decimal" min="0" step="any" placeholder="Quantity" aria-label="Quantity" style="width:auto;flex:1"><select id="bu" aria-label="Unit"></select><button class="btn dark" id="ba">Add</button></div>
+</div>
+<div id="bl"></div>
+<p style="font-size:1.4rem"><b>Total: <span id="bt">₹ 0</span></b></p>
+<p><a class="btn amber" id="bs" href="#" target="_blank" rel="noopener">💬 Send bill on WhatsApp</a> <button class="x" id="bnw">New bill</button></p>
+<p class="note" id="bm"></p>
+</div>
+
+<div id="vG" hidden>
+<h3 style="margin-top:0">Gallery</h3>
+<p class="note" style="margin:4px 0">Photos slide across the site. For a video, upload it to your YouTube channel first, then paste its link here.</p>
+<div class="sec">
+<label class="fld" style="margin-top:0">Choose photos<input id="gf" type="file" accept="image/*" multiple></label>
+<label class="fld">Caption (optional)<input id="gc" maxlength="100"></label>
+<p><button class="btn dark" id="gup">Upload photos</button></p></div>
+<div class="sec">
+<label class="fld" style="margin-top:0">YouTube video link<input id="gy" placeholder="https://youtu.be/..."></label>
+<p><button class="btn dark" id="gav">Add video</button></p></div>
+<p class="note"><b class="msg" id="gst" style="margin-left:0"></b></p>
+<div id="gl"></div>
+</div>
+
+<div id="vM" hidden>
+<h3 style="margin-top:0">Message for customers</h3>
+<p class="note" style="margin:4px 0">Tap a suggestion, change it if you like, then tap Show on website. It appears in a red bar at the top of the site.</p>
+<div class="chips" id="ch"></div>
+<textarea id="nm" maxlength="300" placeholder="Write your message…" aria-label="Message for customers"></textarea>
+<p><button class="btn dark" id="nsv">Show on website</button> <button class="x" id="nrm">Remove message</button><b class="msg" id="nst"></b></p>
+</div>
+</div>
+</div></div>
+
+<script>
+const API="https://script.google.com/macros/s/AKfycbzPwnjaYILC6bq4tNgmt_OtWuyN4mf6KycXHj2Q-0bmAorSuhjAHfgzN_yNR4V_FhzD/exec";
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const P=s=>s.split(";").map(x=>{const a=x.split("|");return{n:a[0],m:a[1],h:a[2],u:a[3]||"k"}});
+const G=[["भाजीपाला · Vegetables",P("Tomato|टोमॅटो|टमाटर;Potato|बटाटा|आलू;Onion|कांदा|प्याज़;Garlic|लसूण|लहसुन;Ginger|आले|अदरक;Green Chilli|हिरवी मिरची|हरी मिर्च;Brinjal|वांगी|बैंगन;Okra (Bhendi)|भेंडी|भिंडी;Cauliflower|फुलकोबी|फूलगोभी;Cabbage|कोबी|पत्ता गोभी;Cluster Beans (Gavar)|गवार|ग्वार फली;French Beans|फरसबी|फ्रेंच बीन्स;Green Peas|वाटाणा|हरी मटर;Capsicum|ढोबळी मिरची|शिमला मिर्च;Cucumber|काकडी|खीरा;Bottle Gourd (Dudhi)|दुधी भोपळा|लौकी;Ridge Gourd (Dodka)|दोडका|तोरई;Bitter Gourd (Karela)|कारले|करेला;Pumpkin|लाल भोपळा|कद्दू;Snake Gourd|पडवळ|चिचिंडा;Ivy Gourd (Tondli)|तोंडली|कुंदरू;Drumstick|शेवगा|सहजन;Raw Banana|कच्ची केळी|कच्चा केला;Carrot|गाजर|गाजर;Radish|मुळा|मूली;Beetroot|बीट|चुकंदर;Sweet Potato|रताळे|शकरकंद;Yam (Suran)|सुरण|जिमीकंद;Arvi|अळकुडी|अरबी;Cowpea (Chawli)|चवळी|लोबिया;Raw Papaya|कच्चा पपई|कच्चा पपीता;Lemon|लिंबू|नींबू;Spinach (Palak)|पालक|पालक|b;Fenugreek (Methi)|मेथी|मेथी|b;Coriander|कोथिंबीर|धनिया|b;Dill (Shepu)|शेपू|सोया|b;Amaranth (Chavlai)|चवळई|चौलाई|b;Roselle (Ambadi)|अंबाडी|अंबाड़ी|b;Spring Onion|कांदा पात|हरा प्याज़|b;Mint|पुदिना|पुदीना|b;Curry Leaves|कढीपत्ता|कड़ी पत्ता|b")],
+["फळे · Fruits",P("Banana|केळी|केला|d;Apple|सफरचंद|सेब;Orange (Nagpur)|संत्री|संतरा;Mosambi|मोसंबी|मौसंबी;Pomegranate|डाळिंब|अनार;Grapes|द्राक्षे|अंगूर;Papaya|पपई|पपीता;Watermelon|कलिंगड|तरबूज;Muskmelon|खरबूज|खरबूजा;Guava|पेरू|अमरूद;Mango|आंबा|आम;Pineapple|अननस|अनानास;Sapota (Chikoo)|चिकू|चीकू;Custard Apple|सीताफळ|शरीफा;Pear|नाशपाती|नाशपाती;Jamun|जांभूळ|जामुन;Ber|बोर|बेर;Fig (Anjeer)|अंजीर|अंजीर;Dragon Fruit|ड्रॅगन फ्रूट|ड्रैगन फ्रूट;Strawberry|स्ट्रॉबेरी|स्ट्रॉबेरी;Amla|आवळा|आंवला;Coconut|नारळ|नारियल|p;Tender Coconut|शहाळे|हरा नारियल|p")]];
+const UN={k:"kg",d:"dozen",p:"piece",b:"bunch"};
+let rates={},pass="",role="",draft={},emps=[],days=[],curNotice="";
+const hit=(i,q)=>!q||(i.n+" "+i.m+" "+i.h).toLowerCase().includes(q);
+const call=o=>fetch(API,{method:"POST",body:JSON.stringify(Object.assign({pass},o))}).then(r=>r.json());
+
+/* today's market */
+(()=>{const mr=["रविवार","सोमवार","मंगळवार","बुधवार","गुरुवार","शुक्रवार","शनिवार"];
+const pl={0:"Deendayal Nagar",1:"Corporation Colony",2:"Giripeth / Gorepeth",3:"Swavalambi Nagar / Pratap Nagar / Atrey Layout",4:"Shivaji Nagar",6:"Shankar Nagar"};
+const nm={Sunday:0,Monday:1,Tuesday:2,Wednesday:3,Thursday:4,Friday:5,Saturday:6};
+let d;try{d=nm[new Date().toLocaleDateString("en-US",{weekday:"long",timeZone:"Asia/Kolkata"})]}catch(e){}
+if(d===undefined)d=new Date().getDay();
+$("dn").textContent=mr[d];
+if(d===5){$("pl").textContent="आज बाजार नाही · Packing day";$("hr").textContent="Friday is our collection and packing day. Next market: Saturday, Shankar Nagar. You can still order on WhatsApp."}
+else $("pl").textContent=pl[d];
+document.querySelectorAll("#sc li").forEach(l=>{if(+l.dataset.d===d)l.className="on"})})();
+
+/* gallery (public) */
+let gal=[],gi=0,gsig="",gpause=false,gtm=0;
+function renderGal(g){gal=g;gi=0;$("gallery").hidden=!g.length;
+$("gt").innerHTML=g.map(x=>'<div class="gs">'+(x.t==="p"?'<img loading="lazy" alt="'+esc(x.c||"Bhumiputra")+'" src="https://lh3.googleusercontent.com/d/'+esc(x.r)+'=w1000">':'<img alt="Video" src="https://i.ytimg.com/vi/'+esc(x.r)+'/hqdefault.jpg"><a class="pl" href="https://www.youtube.com/watch?v='+esc(x.r)+'" target="_blank" rel="noopener" aria-label="Play video">▶</a>')+(x.c?'<div class="cp">'+esc(x.c)+"</div>":"")+"</div>").join("");
+$("gd").innerHTML=g.map((x,k)=>"<i"+(k?"":' class="on"')+"></i>").join("")}
+$("gt").onscroll=()=>{const t=$("gt"),k=Math.round(t.scrollLeft/(t.clientWidth||1));if(k!==gi){gi=k;[...$("gd").children].forEach((d,i)=>{d.className=i===gi?"on":""})}};
+$("gt").ontouchstart=()=>{gpause=true;clearTimeout(gtm);gtm=setTimeout(()=>{gpause=false},8000)};
+setInterval(()=>{if(gpause||gal.length<2)return;const t=$("gt");gi=(gi+1)%gal.length;t.scrollTo({left:t.clientWidth*gi,behavior:"smooth"})},3500);
+
+/* public rates */
+function renderList(){const q=$("q").value.trim().toLowerCase();let h="";
+G.forEach(([t,it])=>{const r=it.filter(i=>{const v=rates[i.n];return hit(i,q)&&v&&v.a&&v.p>0}).map(i=>{const v=rates[i.n],ok=true;
+return '<div class="row'+(ok?"":" na")+'"><span><em>'+i.m+'</em> · '+i.n+' · '+i.h+'</span><b>'+(ok?"₹ "+v.p+" / "+UN[i.u]:"Not available · उपलब्ध नाही")+"</b></div>"}).join("");
+if(r)h+="<h3>"+t+"</h3>"+r});
+$("list").innerHTML=h||(q?"<p>Not available today, or no match. Message us on WhatsApp and we will check.</p>":"<p>Today’s rates are being updated. Please check again soon or message us on WhatsApp.</p>")}
+function showNotice(t,at){curNotice=t;$("nt").hidden=!t;$("ntx").textContent=t;$("nta").textContent=t&&at?"Posted: "+at:""}
+function load(){fetch(API).then(r=>r.json()).then(d=>{rates=d.rates||{};showNotice(d.notice||"",d.noticeAt||"");{const sg=JSON.stringify(d.gallery||[]);if(sg!==gsig){gsig=sg;renderGal(d.gallery||[])}}$("upd").textContent=d.updated?"Rates updated: "+d.updated:"";renderList()}).catch(()=>{$("upd").textContent="Rates could not be loaded. Please message us on WhatsApp."})}
+$("q").oninput=renderList;renderList();load();setInterval(load,300000);
+
+/* staff login */
+$("lg").onclick=()=>{$("panel").hidden=false;document.body.style.overflow="hidden";$("pw").focus()};
+$("cl").onclick=()=>{if(typeof dirty!=="undefined"&&(dirty.size||busy)){flush();st("Saving… tap Close again when it says Saved ✓");return}$("panel").hidden=true;document.body.style.overflow="";pass="";role="";$("pw").value="";$("lb").hidden=false;$("wk").hidden=true;$("lm").textContent=""};
+$("pw").onkeydown=e=>{if(e.key==="Enter")$("go").click()};
+$("go").onclick=()=>{pass=$("pw").value;$("lm").textContent="Checking…";
+call({action:"login"}).then(d=>{if(!d.ok){$("lm").textContent=d.error;pass="";return}
+role=d.role;$("lb").hidden=true;$("wk").hidden=false;$("tA").hidden=$("tM").hidden=$("tT").hidden=$("tG").hidden=role!=="owner";
+draft=JSON.parse(JSON.stringify(rates));renderEd();tab("R")}).catch(()=>{$("lm").textContent="Could not connect. Check the web app link."})};
+const tab=k=>{["R","B","A","M","T","G"].forEach(x=>{$("v"+x).hidden=x!==k;$("t"+x).className=x===k?"on":""});if(k==="A")loadA();if(k==="M")$("nm").value=curNotice;if(k==="T")loadT();if(k==="G")loadGal();if(k==="B"){billOpts();renderBill()}};
+$("tB").onclick=()=>tab("B");
+$("tR").onclick=()=>tab("R");$("tA").onclick=()=>tab("A");$("tM").onclick=()=>tab("M");$("tT").onclick=()=>tab("T");$("tG").onclick=()=>tab("G");
+
+/* rate editor */
+function renderEd(){const q=$("eq").value.trim().toLowerCase();
+const on=i=>{const r=draft[i.n];return r&&r.a};
+const row=i=>{const r=draft[i.n]||{p:"",a:false};return '<div class="erow"><label class="ck"><input type="checkbox" data-t="'+i.n+'"'+(r.a?" checked":"")+' aria-label="Available: '+i.n+'"></label><span><em>'+i.m+'</em> · '+i.n+' · '+i.h+' <small>/ '+UN[i.u]+'</small></span><input type="number" min="0" inputmode="decimal" data-n="'+i.n+'" value="'+(r.p||"")+'" placeholder="₹" aria-label="Price of '+i.n+'"></div>'};
+const all=[];G.forEach(g=>g[1].forEach(i=>{if(hit(i,q))all.push(i)}));
+const A=all.filter(on);
+let h=A.length?"<h3>✅ Available today ("+A.length+")</h3>"+A.map(row).join(""):'<p class="note">Nothing is ticked yet. Tick an item and type its price.</p>';
+G.forEach(([t,it])=>{const r=it.filter(i=>hit(i,q)&&!on(i));if(r.length)h+="<h3>"+t+"</h3>"+r.map(row).join("")});
+$("ed").innerHTML=h}
+$("eq").oninput=renderEd;
+const dirty=new Set();let busy=false,tmr=0;const st=t=>{$("sm").textContent=t};
+function queue(n,ms){dirty.add(n);st("Saving soon…");clearTimeout(tmr);tmr=setTimeout(flush,ms)}
+function flush(){if(busy){tmr=setTimeout(flush,500);return}if(!dirty.size)return;busy=true;const names=[...dirty];dirty.clear();st("Saving…");
+fetch(API).then(r=>r.json()).then(d=>{const o=Object.assign({},d.rates||{});
+names.forEach(n=>{const v=draft[n];if(v&&(v.p>0||v.a))o[n]={p:v.p,a:v.a&&v.p>0};else delete o[n]});
+return call({action:"saveRates",rates:o}).then(r=>{if(!r.ok)throw 0;rates=o;renderList()})})
+.then(()=>{busy=false;if(dirty.size)flush();else st("Saved ✓ "+new Date().toLocaleTimeString("en-IN",{hour:"2-digit",minute:"2-digit",timeZone:"Asia/Kolkata"}))})
+.catch(()=>{names.forEach(n=>dirty.add(n));busy=false;st("⚠ Not saved. Check internet. Trying again…");tmr=setTimeout(flush,4000)})}
+$("ed").oninput=e=>{const n=e.target.dataset.n;if(!n)return;const v=draft[n]||(draft[n]={p:0,a:false});v.p=Number(e.target.value)||0;
+if(v.p>0&&!v.touched){v.a=true;v.touched=1;e.target.closest(".erow").querySelector("input[type=checkbox]").checked=true}queue(n,1500)};
+$("ed").onchange=e=>{const n=e.target.dataset.t;if(!n)return;const v=draft[n]||(draft[n]={p:0,a:false});v.a=e.target.checked;v.touched=1;queue(n,400)};
+$("so").onclick=renderEd;
+let rt=0;const rb=()=>{const b=$("rs");b.textContent="↺ Reset: untick all";b.style.cssText=""};
+$("rs").onclick=()=>{const b=$("rs");
+if(!rt){b.textContent="Tap again to untick ALL";b.style.cssText="background:#B0361F;color:#fff;border-color:#B0361F";rt=setTimeout(()=>{rt=0;rb()},4000);return}
+clearTimeout(rt);rt=0;rb();let c=0;
+Object.keys(draft).forEach(n=>{if(draft[n].a){draft[n].a=false;draft[n].touched=0;dirty.add(n);c++}});
+renderEd();if(!c){st("Nothing was ticked.");return}
+st("Saving soon…");clearTimeout(tmr);tmr=setTimeout(flush,300)};
+
+/* billing */
+let bl=[];
+const money=n=>{const x=Math.round(n*100)/100;return x%1?x.toFixed(2):String(x)};
+const ALL=[];G.forEach(g=>g[1].forEach(i=>ALL.push(i)));
+const byN=n=>ALL.find(i=>i.n===n);
+const lineAmt=l=>l.p*(l.u==="g"?l.q/1000:l.q);
+function billOpts(){const o=ALL.filter(i=>{const v=rates[i.n];return v&&v.a&&v.p>0}).map(i=>'<option value="'+i.n+'">'+i.m+' · '+i.n+' — ₹'+rates[i.n].p+'/'+UN[i.u]+"</option>").join("");
+$("bi").innerHTML=o||'<option value="">No rates yet. Tick items in Rates first.</option>';billUnit()}
+function billUnit(){const i=byN($("bi").value);$("bu").innerHTML=!i?"":i.u==="k"?"<option>kg</option><option>g</option>":"<option>"+UN[i.u]+"</option>"}
+$("bi").onchange=billUnit;
+$("ba").onclick=()=>{const i=byN($("bi").value),q=Number($("bq").value);
+if(!i||!(q>0)){$("bm").textContent="Choose an item and type the quantity.";return}
+bl.push({n:i.n,m:i.m,q,u:$("bu").value,p:rates[i.n].p});$("bq").value="";$("bm").textContent="";renderBill()};
+function renderBill(){let t=0;
+$("bl").innerHTML=bl.map((l,k)=>{const a=lineAmt(l);t+=a;return '<div class="erow"><span><em>'+l.m+"</em> · "+l.n+"<br><small>"+l.q+" "+l.u+" × ₹"+l.p+"/"+UN[byN(l.n).u]+'</small></span><b>₹ '+money(a)+'</b><button class="x" data-x="'+k+'" aria-label="Remove">✕</button></div>'}).join("")||'<p class="note">No items yet.</p>';
+$("bt").textContent="₹ "+money(t);billLink(t)}
+$("bl").onclick=e=>{const k=e.target.dataset.x;if(k===undefined)return;bl.splice(k,1);renderBill()};
+function billLink(t){const d=$("bp").value.replace(/\D/g,"");const ph=d.length===10?"91"+d:(d.length===12&&d.startsWith("91")?d:"");
+const dt=new Date().toLocaleDateString("en-IN",{day:"2-digit",month:"short",year:"numeric",timeZone:"Asia/Kolkata"});const nm=$("bn").value.trim();
+const m="*BHUMIPUTRA 🌾 भूमिपुत्र*\nBill · "+dt+(nm?"\nCustomer: "+nm:"")+"\n\n"+bl.map((l,k)=>(k+1)+". "+l.m+" / "+l.n+"\n    "+l.q+" "+l.u+" × ₹"+l.p+"/"+UN[byN(l.n).u]+" = ₹"+money(lineAmt(l))).join("\n")+"\n\n*Total: ₹"+money(t)+"*\n\nधन्यवाद! Thank you!\nOrder on WhatsApp: +91 93229 14694";
+const a=$("bs");a.dataset.ok=ph&&bl.length?"1":"";a.href=a.dataset.ok?"https://wa.me/"+ph+"?text="+encodeURIComponent(m):"#"}
+$("bs").onclick=e=>{if(!e.currentTarget.dataset.ok){e.preventDefault();$("bm").textContent=bl.length?"Type the customer’s 10-digit mobile number.":"Add at least one item."}else $("bm").textContent=""};
+$("bp").oninput=$("bn").oninput=()=>renderBill();
+$("bnw").onclick=()=>{bl=[];$("bp").value="";$("bn").value="";$("bm").textContent="";renderBill()};
+
+/* gallery (owner) */
+function shrink(f){return new Promise((ok,no)=>{const im=new Image(),u=URL.createObjectURL(f);im.onload=()=>{const s=Math.min(1,1000/Math.max(im.width,im.height)),c=document.createElement("canvas");c.width=Math.round(im.width*s);c.height=Math.round(im.height*s);c.getContext("2d").drawImage(im,0,0,c.width,c.height);URL.revokeObjectURL(u);ok(c.toDataURL("image/jpeg",0.8).split(",")[1])};im.onerror=()=>no();im.src=u})}
+function loadGal(){fetch(API).then(r=>r.json()).then(d=>{$("gl").innerHTML=(d.gallery||[]).map(x=>'<div class="erow"><img alt="" style="width:64px;height:48px;object-fit:cover;border-radius:6px" src="'+(x.t==="p"?"https://lh3.googleusercontent.com/d/"+esc(x.r)+"=w200":"https://i.ytimg.com/vi/"+esc(x.r)+"/default.jpg")+'"><span>'+(x.t==="v"?"▶ Video ":"")+esc(x.c||"")+'</span><button class="x" data-g="'+esc(x.id)+'">Delete</button></div>').join("")||'<p class="note">Nothing here yet.</p>'}).catch(()=>{})}
+$("gup").onclick=async()=>{const fs=[...$("gf").files];if(!fs.length){$("gst").textContent="Choose photos first.";return}
+let n=0;for(const f of fs){$("gst").textContent="Uploading "+(n+1)+" of "+fs.length+"…";
+try{const data=await shrink(f);const r=await call({action:"galAdd",data,caption:$("gc").value.trim()});if(!r.ok)throw 0;n++}catch(e){$("gst").textContent="Failed on photo "+(n+1)+". Try again.";return}}
+$("gst").textContent="Done ✓ "+n+" photo"+(n>1?"s":"")+" added";$("gf").value="";$("gc").value="";loadGal();load()};
+$("gav").onclick=()=>{const m=$("gy").value.match(/(?:youtu\.be\/|v=|shorts\/|embed\/)([\w-]{11})/);if(!m){$("gst").textContent="That does not look like a YouTube link.";return}
+$("gst").textContent="Adding…";call({action:"galAddVideo",yt:m[1],caption:$("gc").value.trim()}).then(r=>{$("gst").textContent=r.ok?"Video added ✓":r.error;if(r.ok){$("gy").value="";loadGal();load()}}).catch(()=>{$("gst").textContent="Failed. Try again."})};
+$("gl").onclick=e=>{const id=e.target.dataset.g;if(!id)return;$("gst").textContent="Deleting…";call({action:"galDel",id}).then(r=>{$("gst").textContent=r.ok?"Deleted ✓":r.error;loadGal();load()}).catch(()=>{$("gst").textContent="Failed. Try again."})};
+
+/* owner message */
+const SUG=["आज सुट्टी आहे, बाजार बंद. · Holiday today, market closed.","आज बाजाराला उशीर होईल. · The market will be late today.","आज बाजार लवकर बंद होईल. · The market will close early today.","आज नवीन भाज्या आणि फळे आली आहेत! · New vegetables and fruits today!","आज बाजाराचे ठिकाण बदलले आहे. WhatsApp वर विचारा. · Market location changed today. Ask on WhatsApp.","पावसामुळे आज बाजार बंद आहे. · Market closed today due to rain.","सणानिमित्त आगाऊ ऑर्डर घेत आहोत. · Taking advance orders for the festival."];
+$("ch").innerHTML=SUG.map((t,i)=>'<button class="chip" data-i="'+i+'">'+esc(t)+"</button>").join("");
+$("ch").onclick=e=>{const i=e.target.dataset.i;if(i!==undefined)$("nm").value=SUG[i]};
+$("nsv").onclick=()=>{const t=$("nm").value.trim();$("nst").textContent=" Saving…";
+call({action:"saveNotice",text:t}).then(d=>{if(!d.ok){$("nst").textContent=" "+d.error;return}$("nst").textContent=t?" Shown on the website ✓":" Message removed ✓";load()}).catch(()=>{$("nst").textContent=" Failed. Try again."})};
+$("nrm").onclick=()=>{$("nm").value="";$("nsv").click()};
+
+/* analytics (owner only, enforced by the server) */
+$("dt").value=new Date().toLocaleDateString("en-CA",{timeZone:"Asia/Kolkata"});
+function loadA(){call({action:"analytics"}).then(d=>{if(d.ok){emps=d.emps;days=d.days;renderA()}else $("an").textContent=d.error})}
+function renderA(){
+$("em").innerHTML=emps.map((e,i)=>'<div class="erow"><input data-e="'+i+'" data-k="name" value="'+esc(e.name)+'" placeholder="Name" aria-label="Employee name"><select data-e="'+i+'" data-k="type" aria-label="Pay type"><option value="monthly"'+(e.type==="monthly"?" selected":"")+'>Monthly</option><option value="daily"'+(e.type==="daily"?" selected":"")+'>Daily</option></select><input type="number" data-e="'+i+'" data-k="amount" value="'+e.amount+'" aria-label="Amount"><button class="x" data-x="'+i+'" aria-label="Remove">✕</button></div>').join("");
+const cm=$("dt").value.slice(0,7),m=days.filter(d=>d.date.slice(0,7)===cm),S=k=>m.reduce((a,d)=>a+(Number(d[k])||0),0),pf=S("profit");
+$("an").innerHTML='<h3>This month</h3><div class="tot"><div><small>Sales</small><b>₹ '+S("sales")+'</b></div><div><small>Salary</small><b>₹ '+S("salary")+'</b></div><div><small>Profit</small><b class="'+(pf<0?"neg":"pos")+'">₹ '+pf+'</b></div></div><h3>Recent days</h3><div class="tw"><table><tr><th>Date</th><th>Sales</th><th>Purchase</th><th>Expenses</th><th>Salary</th><th>Profit</th></tr>'+days.map(d=>"<tr><td>"+esc(d.date)+"</td><td>"+d.sales+"</td><td>"+d.purchase+"</td><td>"+d.expenses+"</td><td>"+d.salary+'</td><td class="'+(d.profit<0?"neg":"pos")+'">'+d.profit+"</td></tr>").join("")+"</table></div>"}
+$("em").oninput=$("em").onchange=e=>{const i=e.target.dataset.e;if(i===undefined)return;const k=e.target.dataset.k;emps[i][k]=k==="amount"?Number(e.target.value)||0:e.target.value};
+$("em").onclick=e=>{const i=e.target.dataset.x;if(i===undefined)return;emps.splice(i,1);renderA()};
+$("ae").onclick=()=>{emps.push({name:"",type:"monthly",amount:0});renderA()};
+$("se").onclick=()=>{$("em2").textContent="Saving…";call({action:"saveEmps",emps:emps.filter(e=>e.name.trim())}).then(d=>{$("em2").textContent=d.ok?"Saved ✓":d.error;if(d.ok)loadA()}).catch(()=>{$("em2").textContent="Save failed."})};
+$("sd").onclick=()=>{$("dm").textContent="Saving…";const dt=$("dt").value;
+call({action:"attendance"}).then(r=>{const f={};emps.forEach(e=>{if(e.name.trim())f[e.name]=1});
+(r.rows||[]).forEach(x=>{if(x.date===dt&&f[x.name]!==undefined)f[x.name]=x.status==="absent"?0:x.status==="half"?.5:1});
+const present=Object.keys(f).filter(n=>f[n]>0);
+return call({action:"saveDay",day:{date:dt,sales:Number($("sa").value)||0,purchase:Number($("pu").value)||0,expenses:Number($("ex").value)||0,present,factors:f}})})
+.then(d=>{$("dm").textContent=d.ok?"Saved ✓ Profit ₹ "+d.profit:d.error;if(d.ok)loadA()}).catch(()=>{$("dm").textContent="Save failed."})};
+
+/* attendance and pie charts (owner only) */
+let attRows=[],marks={};
+const ST={present:"Present",half:"Half day",absent:"Absent"},SC={present:"#2D5A27",half:"#D9822B",absent:"#B0361F"};
+const todayIN=()=>new Date().toLocaleDateString("en-CA",{timeZone:"Asia/Kolkata"});
+function pie(d){const t=d.reduce((a,x)=>a+x.v,0);if(!t)return'<p class="note">No attendance recorded for this month yet.</p>';
+let a=-Math.PI/2,s='<svg viewBox="-1 -1 2 2" width="190" height="190" role="img" aria-label="Pie chart">';
+d.filter(x=>x.v>0).forEach(x=>{const f=x.v/t;if(f>=.9999){s+='<circle r="1" fill="'+x.c+'"/>';return}
+const b=a+f*2*Math.PI;s+='<path d="M0 0 L'+Math.cos(a)+" "+Math.sin(a)+" A1 1 0 "+(f>.5?1:0)+" 1 "+Math.cos(b)+" "+Math.sin(b)+' Z" fill="'+x.c+'" stroke="#fff" stroke-width=".02"/>';a=b});
+return'<div class="pie">'+s+'</svg><ul class="lg">'+d.map(x=>'<li><i style="background:'+x.c+'"></i>'+esc(x.l)+" <b>"+x.v+"</b> ("+Math.round(x.v/t*100)+"%)</li>").join("")+"</ul></div>"}
+function loadT(){if(!$("ad").value)$("ad").value=todayIN();if(!$("am").value)$("am").value=todayIN().slice(0,7);
+Promise.all([call({action:"analytics"}),call({action:"attendance"})]).then(([a,b])=>{if(!a.ok||!b.ok)return;emps=a.emps;attRows=b.rows;renderAt();renderRp()})}
+function renderAt(){const dt=$("ad").value;marks={};emps.forEach(e=>{if(e.name)marks[e.name]="present"});
+attRows.forEach(x=>{if(x.date===dt&&marks[x.name]!==undefined)marks[x.name]=x.status});
+$("at").innerHTML=emps.filter(e=>e.name).map(e=>'<div class="erow att"><span><em>'+esc(e.name)+'</em></span><div class="seg" data-n="'+esc(e.name)+'">'+Object.keys(ST).map(k=>'<button data-s="'+k+'"'+(marks[e.name]===k?' class="on"':"")+">"+(k==="present"?"✓ ":k==="half"?"½ ":"✕ ")+ST[k]+"</button>").join("")+"</div></div>").join("")||"<small>Add employees in the Analytics tab first.</small>"}
+$("at").onclick=e=>{const b=e.target.closest("button");if(!b)return;const n=b.parentNode.dataset.n;marks[n]=b.dataset.s;b.parentNode.querySelectorAll("button").forEach(x=>{x.className=x===b?"on":""})};
+$("ad").onchange=renderAt;
+$("asv").onclick=()=>{const dt=$("ad").value;$("ast").textContent=" Saving…";
+call({action:"saveAttendance",date:dt,marks}).then(d=>{if(!d.ok){$("ast").textContent=" "+d.error;return}
+attRows=attRows.filter(x=>x.date!==dt).concat(Object.keys(marks).map(n=>({date:dt,name:n,status:marks[n]})));$("ast").textContent=" Saved ✓";renderRp()}).catch(()=>{$("ast").textContent=" Failed. Try again."})};
+$("am").onchange=$("asel").onchange=()=>renderRp();
+function renderRp(){const m=$("am").value,sel=$("asel"),cur=sel.value,names=emps.filter(e=>e.name).map(e=>e.name);
+sel.innerHTML='<option value="">All staff</option>'+names.map(n=>"<option>"+esc(n)+"</option>").join("");sel.value=cur;const who=sel.value;
+const inM=x=>x.date.slice(0,7)===m&&names.includes(x.name),rows=attRows.filter(x=>inM(x)&&(!who||x.name===who));
+const c={present:0,half:0,absent:0};rows.forEach(x=>{if(c[x.status]!==undefined)c[x.status]++});
+let h="<h3>"+(who?esc(who):"All staff")+" · status split</h3>"+pie(Object.keys(ST).map(k=>({l:ST[k]+" days",v:c[k],c:SC[k]})));
+if(!who&&names.length>1){const pal=["#2D5A27","#D9822B","#3E7C9A","#8A5A9E","#B0361F","#6B8E23","#C79A2B","#4B5D67"];
+h+="<h3>Days worked by each person</h3>"+pie(names.map((n,i)=>({l:n,v:attRows.filter(x=>inM(x)&&x.name===n).reduce((a,x)=>a+(x.status==="present"?1:x.status==="half"?.5:0),0),c:pal[i%pal.length]})))}
+h+='<div class="tw"><table><tr><th>Name</th><th>Present</th><th>Half</th><th>Absent</th><th>Attendance</th></tr>'+names.filter(n=>!who||n===who).map(n=>{const r=attRows.filter(x=>inM(x)&&x.name===n),p=r.filter(x=>x.status==="present").length,hf=r.filter(x=>x.status==="half").length,ab=r.filter(x=>x.status==="absent").length,t=p+hf+ab;return"<tr><td>"+esc(n)+"</td><td>"+p+"</td><td>"+hf+"</td><td>"+ab+"</td><td>"+(t?Math.round((p+hf/2)/t*100)+"%":"–")+"</td></tr>"}).join("")+"</table></div>";
+$("rp").innerHTML=h}
+
+/* 3D scroll layer */
+(()=>{
+const rm=matchMedia("(prefers-reduced-motion: reduce)").matches;
+const root=document.documentElement,hero=document.querySelector(".hero"),sp=$("sp");
+if(!rm){
+ document.querySelectorAll("section .w,.today .w").forEach(e=>e.classList.add("rv"));
+ const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add("in");io.unobserve(en.target)}}),{rootMargin:"0px 0px -8% 0px"});
+ document.querySelectorAll(".rv").forEach(e=>io.observe(e));
+}
+function tiltGal(){const t=$("gt");if(!t||rm)return;const w=t.clientWidth||1,l=t.getBoundingClientRect().left;
+ t.querySelectorAll(".gs").forEach(s=>{const a=Math.max(-1,Math.min(1,(s.getBoundingClientRect().left-l)/w));s.style.transform="rotateY("+(a*-38).toFixed(1)+"deg) scale("+(1-Math.abs(a)*.14).toFixed(3)+")";s.style.opacity=(1-Math.abs(a)*.5).toFixed(2)})}
+let tick=0;
+function upd(){tick=0;const y=scrollY,h=Math.max(1,root.scrollHeight-innerHeight);sp.style.width=(y/h*100)+"%";
+ if(!rm){root.style.setProperty("--hp",Math.min(1,Math.max(0,y/(hero.offsetHeight||1))).toFixed(3))}}
+addEventListener("scroll",()=>{if(!tick)tick=requestAnimationFrame(upd)},{passive:true});
+$("gt").addEventListener("scroll",()=>requestAnimationFrame(tiltGal),{passive:true});
+new MutationObserver(tiltGal).observe($("gt"),{childList:true});
+hero.addEventListener("pointermove",e=>{const r=hero.getBoundingClientRect();root.style.setProperty("--mx",((e.clientX-r.left)/r.width-.5).toFixed(3))});
+upd();
+})();
+</script>
+</body>
+</html>
